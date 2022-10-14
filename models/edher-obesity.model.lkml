@@ -8,8 +8,10 @@ datagroup: edher_obesity_default_datagroup {
   max_cache_age: "1 hour"
 }
 datagroup: edher_test {
-  sql_trigger: SELECT CURRENT_DATE();;
+  sql_trigger: SELECT FLOOR((UNIX_TIMESTAMP(NOW()) - 60*60*18)/(60*60*24));;
   max_cache_age: "24 hours"
+  label: "Daily at 6pm"
+  description: "Download data daily at 6pm"
 
 }
 
