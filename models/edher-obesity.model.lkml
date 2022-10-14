@@ -7,6 +7,11 @@ datagroup: edher_obesity_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
+datagroup: edher_test {
+  sql_trigger: "3:05 pm";;
+  max_cache_age: "24 hours"
+
+}
 
 
 

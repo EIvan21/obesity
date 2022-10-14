@@ -87,9 +87,22 @@ view: obesitymx {
     type: number
     sql: ${TABLE}.Weight ;;
   }
+  dimension: test_split {
+    type: string
+    sql: concat("'",${nobeyesdad},"'",",","'",${mtrans},"'") ;;
+  }
 
   measure: count {
     type: count
     drill_fields: []
+  }
+  measure: median {
+    type: median
+    sql: ${height} ;;
+  }
+
+  measure: sum {
+    type: sum
+    sql: ${age} ;;
   }
 }
