@@ -8,7 +8,7 @@ datagroup: edher_obesity_default_datagroup {
   max_cache_age: "1 hour"
 }
 datagroup: edher_test {
-  sql_trigger: "3:05 pm";;
+  sql_trigger: SELECT CURRENT_DATE();;
   max_cache_age: "24 hours"
 
 }
